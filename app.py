@@ -9,4 +9,4 @@ user_input = st.text_area('Enter your text here:')
 if st.button('Predict'):
     model = joblib.load('sentiment-model.pkl')
     prediction = model.predict([user_input])
-    st.write(f'The sentiment of the text is: {sentiment_label[prediction[0]]}')
+    st.info(f'The sentiment of the text is: {sentiment_label[prediction[0]]}')
